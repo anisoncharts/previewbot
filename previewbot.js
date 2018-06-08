@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.channel.id === "401395421769105431") {
-        client.channels.get("401395421769105431").send(message.content)
+        client.channels.get("401395421769105431").send(message.content);
     }
 });
 
