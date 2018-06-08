@@ -1,13 +1,13 @@
 {
-  "name": "PreviewBot",
-  "description": "Preview Bot",
+  "name": "previewbot",
+  "description": "previewbot",
   "version": "0.0.0",
   "main": "previewbot.js",
   "scripts": {
     "start": "node previewbot.js"
   },
   "dependencies": {
-    "discord.js": "11.3.0",
+    "discord.js": "11.1.0",
     "request": "2.81.0"
   }
 }
