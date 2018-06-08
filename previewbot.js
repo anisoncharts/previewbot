@@ -6,10 +6,9 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
+    if (message.channel.id === 298059784987607040) {
+        client.channels.get(401395421769105431).send(message.content)
+    }
 });
 
-// THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
