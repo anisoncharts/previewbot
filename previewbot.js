@@ -10,7 +10,7 @@ client.on('message', message => {
         client.channels.get("401395421769105431").send("right");
         client.channels.get("401395421769105431").send(message.content);
         
-        if (message.content.includes("https://") || message.content.includes("http://")) {
+        if (message.content.includes("https://")) {
             client.channels.get("454601350072762378").send(message.content);
         else {
             client.channels.get("401395421769105431").send("fail");
