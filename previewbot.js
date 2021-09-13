@@ -3,6 +3,8 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
+    var channel = client.channels.get("454601350072762378");
+    console.log(channel);
 });
 
 client.on('message', message => {
