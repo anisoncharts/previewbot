@@ -6,6 +6,8 @@ const client = new Client({
 		GatewayIntentBits.MessageContent,
   ]
 });
+const archive = client.channels.cache.get('454601350072762378');
+
 
 client.once('ready', () => {
     console.log('I am ready!');
@@ -13,11 +15,11 @@ client.once('ready', () => {
 
 client.on('messageCreate', message => {
     if (message.channel.id === "298059784987607040" && message.content.includes("http")) {
-        client.channels.get("454601350072762378").send(message.content);
+        archive.send(message.content);
     }
   
     if (message.channel.id === "1016602103604584528" && message.content.includes("http")) {
-        client.channels.get("454601350072762378").send(message.content);
+        archive.send(message.content);
     }
 });
 
