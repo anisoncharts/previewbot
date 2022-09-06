@@ -7,19 +7,19 @@ const client = new Client({
   ]
 });
 
-
 client.once('ready', () => {
     console.log('I am ready!');
-    const archive = client.channels.cache.get('454601350072762378');
 });
 
 client.on('messageCreate', message => {
     if (message.channel.id === "298059784987607040" && message.content.includes("http")) {
+	archive = client.channels.cache.get('454601350072762378');
         archive.send(message.content);
     }
   
     if (message.channel.id === "1016602103604584528" && message.content.includes("http")) {
-        archive.send(message.content);
+	archive = client.channels.cache.get('454601350072762378'); 
+	archive.send(message.content);
     }
 });
 
