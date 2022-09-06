@@ -6,11 +6,11 @@ const client = new Client({
 		GatewayIntentBits.MessageContent,
   ]
 });
-const archive = client.channels.cache.get('454601350072762378');
 
 
 client.once('ready', () => {
     console.log('I am ready!');
+    const archive = client.channels.cache.get('454601350072762378');
 });
 
 client.on('messageCreate', message => {
