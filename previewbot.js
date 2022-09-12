@@ -21,6 +21,10 @@ client.on('messageCreate', message => {
 	archive = client.channels.cache.get('454601350072762378'); 
 	archive.send(message.content);
     }
+
+    if (message.channel.id === "454601350072762378" && message.crosspostable()) {
+	message.crosspost();
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
