@@ -22,7 +22,7 @@ client.on('messageCreate', message => {
 	archive.send(message.content);
     }
 
-    if (message.channel.id === "454601350072762378" && message.crosspostable()) {
+    if (message.channel.id === "454601350072762378") {
 	message.crosspost()
 		.then(() => console.log('Crossposted message'))
     		.catch(console.error);
