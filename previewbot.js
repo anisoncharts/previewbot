@@ -23,7 +23,9 @@ client.on('messageCreate', message => {
     }
 
     if (message.channel.id === "454601350072762378" && message.crosspostable()) {
-	message.crosspost();
+	message.crosspost()
+		.then(() => console.log('Crossposted message'))
+    		.catch(console.error);
     }
 });
 
